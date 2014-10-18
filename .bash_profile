@@ -3,9 +3,6 @@ export EDITOR="vim"
 export VISUAL="vim"
 export PS1='\[\e[1;30m\]\u\[\e[0;31m\]$(__git_ps1)\[\e[1;30m\] \w\n\$ \[\e[00m\]'
 
-source /usr/local/git/contrib/completion/git-completion.bash
-source /usr/local/git/contrib/completion/git-prompt.sh
-
 function prepend_to_path () {
 	export PATH=$1:$PATH
 }
@@ -30,3 +27,7 @@ alias ss='subl -n .'
 function title () {
 	echo -e "\033];$1\007"
 }
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+	. $(brew --prefix)/etc/bash_completion
+fi
