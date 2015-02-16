@@ -23,6 +23,9 @@ alias removeds='find . -name ".DS_Store" -print0 | xargs -0 rm'
 # open current directory as Sublime Text 2 project
 alias ss='subl -n .'
 
+# export .env file
+alias exportdotenv='export $(cat .env | xargs)'
+
 # set terminal's title
 function title () {
 	echo -e "\033];$1\007"
