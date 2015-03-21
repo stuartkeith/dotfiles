@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import os
+
+
+current_directory = os.path.dirname(os.path.realpath(__file__))
+home_directory = os.getenv('HOME')
+
+def link(source_filename, link_path):
+    source_path = os.path.join(current_directory, source_filename)
+
+    try:
+        os.symlink(source_path, link_path)
+    except OSError:
+        print 'did not link %s (already exists)' % link_path
+    else:
+        print 'linked %s to %s' % (source_filename, link_path)
+
+def link_in_home(source_filename, link_relative_path):
+    link_path = os.path.join(home_directory, link_relative_path)
+
+    link(source_filename, link_path)
+
+# link bash_profile
+link_in_home('bash_profile', '.bash_profile')
+
+# link Preferences.sublime-settings
+link_in_home('Preferences.sublime-settings', 'Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings')
