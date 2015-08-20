@@ -21,8 +21,5 @@ def link_in_home(source_filename, link_relative_path):
 
     link(source_filename, link_path)
 
-# link bash_profile
-link_in_home('bash_profile', '.bash_profile')
-
 # link Preferences.sublime-settings
 link_in_home('Preferences.sublime-settings', 'Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings')
