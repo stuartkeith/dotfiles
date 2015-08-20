@@ -8,7 +8,7 @@ function prepend_to_path () {
 }
 
 prepend_to_path "/usr/local/bin"
-prepend_to_path "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin"
+prepend_to_path "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 prepend_to_path "$HOME/bin"
 
 # reload bash profile
