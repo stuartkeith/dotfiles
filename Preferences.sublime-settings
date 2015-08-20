@@ -1,10 +1,34 @@
 {
-	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip", "node_modules/*"],
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"node_modules/*"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"draw_white_space": "all",
+	"folder_exclude_patterns":
+	[
+	],
 	"font_size": 12.0,
 	"ignored_packages":
 	[
 		"Vintage"
+	],
+	"rulers":
+	[
+		80
 	],
 	"show_full_path": true,
 	"trim_trailing_white_space_on_save": true
