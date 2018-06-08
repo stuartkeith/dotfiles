@@ -21,5 +21,4 @@ def link_in_home(source_filename, link_relative_path):
 
     link(source_filename, link_path)
 
-# link Preferences.sublime-settings
-link_in_home('Preferences.sublime-settings', 'Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings')
+link_in_home('settings.json', 'Library/Application Support/Code/User/settings.json')
