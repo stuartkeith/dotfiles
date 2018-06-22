@@ -5,5 +5,5 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": false,
     "files.trimFinalNewlines": true,
-    "window.title": "${activeEditorMedium}${separator}${rootName}"
+    "window.title": "${folderPath}/${activeEditorMedium}${separator}"
 }
