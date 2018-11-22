@@ -22,3 +22,5 @@ def link_in_home(source_filename, link_relative_path):
     link(source_filename, link_path)
 
 link_in_home('settings.json', 'Library/Application Support/Code/User/settings.json')
+
+link_in_home('vimrc', '.vimrc')
