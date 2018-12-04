@@ -7,8 +7,6 @@ function prepend_to_path () {
 	export PATH=$1:$PATH
 }
 
-prepend_to_path "/usr/local/bin"
-prepend_to_path "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 prepend_to_path "$HOME/bin"
 
 # reload bash profile
@@ -22,9 +20,6 @@ alias gitundo='git reset --soft "HEAD^"'
 
 # recursively remove all .DS_Store files
 alias removeds='find . -name ".DS_Store" -print0 | xargs -0 rm'
-
-# open current directory as Sublime Text 2 project
-alias ss='subl -n .'
 
 # export .env file
 alias exportdotenv='export $(cat .env | xargs)'
