@@ -97,3 +97,8 @@ inoremap <C-U> <C-G>u<C-U>
 if has('mouse')
   set mouse=a
 endif
+
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
