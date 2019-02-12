@@ -1,9 +1,11 @@
 {
     "workbench.colorTheme": "Visual Studio Dark",
     "editor.renderWhitespace": "all",
+    "editor.rulers": [80],
     "editor.tabSize": 2,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "spellright.groupDictionaries": false,
     "window.title": "${folderName} | ${activeEditorMedium}${separator}"
 }
