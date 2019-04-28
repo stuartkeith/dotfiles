@@ -2,6 +2,7 @@ export CLICOLOR=1
 export EDITOR="vim"
 export VISUAL="vim"
 export PS1='\[\e[1;30m\]\u\[\e[0;31m\]$(__git_ps1)\[\e[1;30m\] \w\n\$ \[\e[00m\]'
+export HISTSIZE=5000
 
 function prepend_to_path () {
 	export PATH=$1:$PATH
