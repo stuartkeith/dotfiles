@@ -7,5 +7,11 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "spellright.groupDictionaries": false,
-    "window.title": "${folderName} | ${activeEditorMedium}${separator}"
+    "window.title": "${folderName} | ${activeEditorMedium}${separator}",
+    "javascript.autoClosingTags": false,
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#111",
+    }
 }
