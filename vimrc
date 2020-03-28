@@ -94,10 +94,6 @@ inoremap <C-U> <C-G>u<C-U>
 
 " vim:set ft=vim et sw=2:
 
-if has('mouse')
-  set mouse=a
-endif
-
 set expandtab
 set tabstop=2
 set softtabstop=2
