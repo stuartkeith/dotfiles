@@ -10,7 +10,7 @@ export HISTSIZE=5000
 # git information for prompt
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%F{9}%b%f '
+zstyle ':vcs_info:git:*' formats '%F{1}[%b]%f '
 
 # prompt
 PROMPT_NEWLINE=$'\n'
