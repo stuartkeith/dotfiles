@@ -2,7 +2,6 @@
 
 import os
 
-
 current_directory = os.path.dirname(os.path.realpath(__file__))
 home_directory = os.getenv('HOME')
 
