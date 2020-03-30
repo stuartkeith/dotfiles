@@ -15,7 +15,7 @@ zstyle ':vcs_info:git:*' formats '%F{1}[%b]%f '
 # prompt
 PROMPT_NEWLINE=$'\n'
 setopt prompt_subst
-export PROMPT='${vcs_info_msg_0_}%F{RED}%~${PROMPT_NEWLINE}⚡️%f '
+export PROMPT='${vcs_info_msg_0_}%F{8}%~${PROMPT_NEWLINE}$%f '
 
 function prepend_to_path () {
 	export PATH=$1:$PATH
