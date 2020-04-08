@@ -11,9 +11,9 @@ def link(source_filename, link_path):
     try:
         os.symlink(source_path, link_path)
     except OSError:
-        print 'did not link %s (already exists)' % link_path
+        print('did not link %s (already exists)' % link_path)
     else:
-        print 'linked %s to %s' % (source_filename, link_path)
+        print('linked %s to %s' % (source_filename, link_path))
 
 def link_in_home(source_filename, link_relative_path):
     link_path = os.path.join(home_directory, link_relative_path)
@@ -23,3 +23,14 @@ def link_in_home(source_filename, link_relative_path):
 link_in_home('settings.json', 'Library/Application Support/Code/User/settings.json')
 
 link_in_home('vimrc', '.vimrc')
+
+if not os.path.exists('ubuntu-font-family-0.83.zip'):
+    print('installing ubuntu font')
+    os.system('curl https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip -o ubuntu-font-family-0.83.zip')
+    os.system('unzip ubuntu-font-family-0.83.zip ubuntu-font-family-0.83/UbuntuMono-R.ttf -d ~/Library/Fonts/')
+else:
+    print('did not install ubuntu font (already exists)')
+
+print('writing iterm2 configuration')
+os.system('defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"')
+os.system('defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true')
