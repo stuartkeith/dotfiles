@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
+import sys
 
 current_directory = os.path.dirname(os.path.realpath(__file__))
 home_directory = os.getenv('HOME')
@@ -20,17 +21,24 @@ def link_in_home(source_filename, link_relative_path):
 
     link(source_filename, link_path)
 
-link_in_home('settings.json', 'Library/Application Support/Code/User/settings.json')
-
 link_in_home('vimrc', '.vimrc')
+
+if sys.platform != 'darwin':
+    print('skipping mac-specific steps')
+
+    sys.exit()
+
+link_in_home('settings.json', 'Library/Application Support/Code/User/settings.json')
 
 if not os.path.exists('ubuntu-font-family-0.83.zip'):
     print('installing ubuntu font')
+
     os.system('curl https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip -o ubuntu-font-family-0.83.zip')
     os.system('unzip ubuntu-font-family-0.83.zip ubuntu-font-family-0.83/UbuntuMono-R.ttf -d ~/Library/Fonts/')
 else:
     print('did not install ubuntu font (already exists)')
 
 print('writing iterm2 configuration')
+
 os.system('defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"')
 os.system('defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true')
