@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "GitHub Dark",
     "editor.renderWhitespace": "all",
     "editor.rulers": [80],
     "editor.tabSize": 2,
@@ -13,5 +13,6 @@
     "editor.minimap.enabled": false,
     "workbench.colorCustomizations": {
         "statusBar.background": "#111",
-    }
+    },
+    "explorer.autoReveal": false
 }
