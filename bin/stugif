@@ -1,0 +1,1 @@
+ffmpeg -i "$1" -vf "fps=4" -loop 0 "$1.gif"

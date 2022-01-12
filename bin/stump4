@@ -1,0 +1,1 @@
+ffmpeg -i "$1" -vcodec h264 "$1.mp4"
